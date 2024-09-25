@@ -1,0 +1,4 @@
+git+https://github.com/LeelaChessZero/lc0.git
+flask
+flask_cors
+openai
