@@ -21,6 +21,9 @@ openai.api_key = "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"
 def evaluate():
     if request.method == 'OPTIONS':
         return '', 204
+    elif request.method == 'GET':
+        # Just for testing, send a response for GET
+        return jsonify({"message": "GET request received"}), 200
     elif request.method == 'POST':
         
         data = request.get_json()
