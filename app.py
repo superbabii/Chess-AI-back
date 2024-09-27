@@ -5,7 +5,8 @@ import openai
 import os
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS
+# CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS
+CORS(app)  # Enable CORS
 
 # Initialize LCZero backend with weights
 weights_path = "weights/744706.pb.gz"
