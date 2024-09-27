@@ -16,7 +16,7 @@ backend = Backend(weights=w)
 openai.api_key = "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"
 
 
-@app.route('/evaluate', methods=['POST', 'OPTIONS'])
+@app.route('/evaluate', methods=['POST', 'GET', 'OPTIONS'])
 def evaluate():
     if request.method == 'OPTIONS':
         return '', 204
