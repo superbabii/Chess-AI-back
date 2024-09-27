@@ -21,9 +21,6 @@ openai.api_key = "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"
 def evaluate():
     if request.method == 'OPTIONS':
         return '', 204
-    elif request.method == 'GET':
-        # Just for testing, send a response for GET
-        return jsonify({"message": "GET request received"}), 200
     elif request.method == 'POST':
         
         data = request.get_json()
@@ -99,4 +96,4 @@ def llm_chat():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host='127.0.0.1', port=8000)
